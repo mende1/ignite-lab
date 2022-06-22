@@ -4,7 +4,10 @@ module.exports = {
     './src/**/*.tsx'
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: "Roboto, sans-serif",
+      },
   },
   plugins: [],
 }
