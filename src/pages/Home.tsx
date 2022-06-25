@@ -85,7 +85,7 @@ export function Home() {
         </div>
       </div>
       <img
-        src="/src/assets/code-mockup.png"
+        src="/static/code-mockup.png"
         className="mt-10"
         alt="Background Blur Green"
       />
