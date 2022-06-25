@@ -2,6 +2,7 @@ import { gql, useQuery } from "@apollo/client";
 import { ComunityButtons } from "./ComunityButtons";
 import { ExclusiveContents } from "./ExclusiveContents";
 import { LessonDetails } from "./LessonDetails";
+import { LoadingPage } from "./LoadingPage";
 import { PlayerVideo } from "./PlayerVideo";
 
 const GET_LESSON_BY_SLUG_QUERY = gql`
@@ -47,7 +48,7 @@ export function MainEvent(props: MainEventProps) {
   );
 
   if (!data) {
-    return <div className="flex-1">Carregando...</div>;
+    return <LoadingPage />;
   }
 
   return (
@@ -56,9 +57,9 @@ export function MainEvent(props: MainEventProps) {
       <div className="p-8 max-w-[1100px] mx-auto">
         <div className="flex items-start gap-16">
           <LessonDetails
-            title={data?.lesson.title}
-            description={data?.lesson.description}
-            teacher={data?.lesson.teacher}
+            title={data.lesson.title}
+            description={data.lesson.description}
+            teacher={data.lesson.teacher}
           />
           <ComunityButtons />
         </div>
