@@ -1,5 +1,5 @@
 import { DiscordLogo, Lightning } from "phosphor-react";
-import { Button } from "../Button";
+import { Button } from "../../Button.tsx";
 
 export function ComunityButtons() {
   return (
