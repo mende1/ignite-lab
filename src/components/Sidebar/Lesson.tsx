@@ -41,7 +41,7 @@ export function Lesson(props: LessonProps) {
           isActiveLesson
             ? "border-green-500 bg-green-500"
             : "border-gray-500 group-hover:border-green-500"
-        } ${!isLessonAvailable && "group-hover:border-gray-500"}`}
+        } group-disabled:border-gray-500`}
       >
         <header className="flex items-center justify-between mb-4">
           {isLessonAvailable ? (
